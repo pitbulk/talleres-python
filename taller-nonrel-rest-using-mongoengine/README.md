@@ -8,8 +8,9 @@ Para hacer uso de el es necesario primero tener una base de datos mongo. La inst
 ```
 
 A continuación crear un entorno de virtualenv
+
 ```
-$    virtualenv taller-nonrel
+$    virtualenv taller-nonrel:x
 ```
 
 A continuación entrar en la carpeta taller-nonrel y activar el entorno
