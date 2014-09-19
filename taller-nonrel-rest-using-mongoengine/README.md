@@ -1,6 +1,6 @@
-# Bases de datos No Relacionales (nonrel). Taller de django-mongodb-engine.
+# API/REST con Bases de datos No Relacionales (nonrel). Taller de django-rest-framework-mongoengine.
 
-Este archivo contiene un proyecto de ejemplo con el que explicamos el uso de mongodb y django-mongodb-engine
+Este archivo contiene un proyecto de ejemplo con el que explicamos el uso de mongoengine y django-rest-framework-mongoengine.
 
 Para hacer uso de el es necesario primero tener una base de datos mongo. La instalamos [comandos para ubuntu]
 ```
@@ -10,24 +10,30 @@ Para hacer uso de el es necesario primero tener una base de datos mongo. La inst
 A continuación crear un entorno de virtualenv
 
 ```
-$    virtualenv taller-nonrel:x
+$    virtualenv taller-nonrel-rest-using-mongoengine
 ```
 
-A continuación entrar en la carpeta taller-nonrel y activar el entorno
+A continuación entrar en la carpeta taller- y activar el entorno
 
 ```
-$    cd taller-nonrel
+$    cd taller-nonrel-rest-using-mongoengine
 $    source bin/activate
 ```
 
-Y posteriormente instalar un fork de Django (django-nonrel) y el resto de librerias que requiere el proyecto
+Y posteriormente instalar Django 1.6.5 y el resto de las librerias que requiere el proyecto:
 ```
-$   pip install git+https://github.com/django-nonrel/django@nonrel-1.5
-$   pip install git+https://github.com/django-nonrel/djangotoolbox
-$   pip install git+https://github.com/django-nonrel/mongodb-engine
+$    pip install django==1.6.5                 # mongoadmin no funciona el Django 1.7 
+$    pip install djangorestframework
+$    pip install mongoengine
+$    pip install django-rest-framework-mongoengine
+$    pip install mongodbforms 
+
+$    git clone https://github.com/jschrewe/django-mongoadmin.git
+$    cd django-mongoadmin/
+$    python setup.py install
 ```
 
-Lo siguiente es copiar el proyecto dentro de la carpeta taller-nonrel
+Lo siguiente es copiar el proyecto dentro de la carpeta taller-nonrel-rest-using-mongoengine
 
 Entramos dentro del proyecto, sincronizamos la BD (creamos el usuario admin) y arrancamos el servidor
 
